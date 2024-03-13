@@ -1,0 +1,62 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  text-align: center;
+}
+
+#battery {
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 10px; 
+  overflow: hidden;
+  position: relative;
+}
+
+#charge {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.5s, left 0.5s; 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#charge-level {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+#charging-time {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+}
+
+.active {
+  animation: charge-animation 3s infinite linear;
+}
+@keyframes charge-animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 16.25em;
+  }
+}
